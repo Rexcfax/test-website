@@ -1,0 +1,233 @@
+/* Основные стили для всего документа */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #6e45e2, #88d3ce); /* Градиент фона */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Обеспечить, что тело страницы всегда занимает как минимум 100% высоты окна */
+}
+
+/* Стили для навигационного меню */
+.nav {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    gap: 20px;
+    background: rgba(0, 0, 0, 0.7); /* Полупрозрачный фон */
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Тень для эффекта 3D */
+    z-index: 1;
+}
+
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.nav-link:hover {
+    color: #f4f4f4;
+    transform: scale(1.1); /* Легкое увеличение при наведении */
+}
+
+/* Центрирование контента */
+.center-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh; /* Увеличить высоту контента для большего пространства */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Контейнер для изображения и кнопки */
+.image-button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Отступ между изображением и кнопкой */
+    position: relative; /* Позиционирование для размещения иконки Discord */
+}
+
+/* Контейнер для кнопки */
+.button-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Стили для контейнера изображения */
+.image-container {
+    width: 100%; /* Позволяет изображению занимать всю доступную ширину */
+    max-width: 800px; /* Уменьшить максимальную ширину изображения */
+    position: relative;
+}
+
+.image {
+    width: 100%; /* Изображение занимает всю ширину контейнера */
+    height: auto; /* Поддержка пропорций изображения */
+    transition: transform 0.1s ease; /* Плавный переход для наклона */
+}
+
+/* Стили для кнопки Download */
+.download-button {
+    background-color: #1a1a1a; /* Яркий цвет кнопки */
+    color: #fff; /* Цвет текста */
+    border: none;
+    padding: 20px 40px; /* Размер кнопки */
+    font-size: 24px; /* Размер шрифта */
+    border-radius: 10px; /* Скругление углов */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Тень для эффекта 3D */
+}
+
+.download-button:hover {
+    background-color: #252120; /* Цвет кнопки при наведении */
+    transform: scale(1.05);
+}
+
+.download-button:active {
+    background-color: #1a1a1a; /* Цвет кнопки при нажатии */
+}
+
+/* Стили для иконки Discord */
+.discord-icon {
+    position: fixed; /* Фиксированное положение */
+    bottom: 20px; /* Расположить иконку внизу */
+    left: 20px; /* Расположить иконку слева */
+    width: 50px; /* Размер иконки */
+    height: 50px;
+    background-color: #7289da; /* Цвет фона иконки */
+    border-radius: 50%; /* Круглая форма */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Тень для эффекта 3D */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10; /* Убедиться, что иконка будет поверх другого контента */
+}
+
+.discord-icon img {
+    width: 30px; /* Размер изображения иконки */
+    height: auto;
+    filter: brightness(0) invert(1); /* Инверсия цветов для видимости на фоне */
+}
+
+/* Стили для футера */
+.footer {
+    display: flex;
+    flex-wrap: wrap; /* Позволяет секциям переноситься на новую строку */
+    justify-content: space-between;
+    align-items: flex-start; /* Выравнивание секций по верхнему краю */
+    background-color: #000; /* Черный фон футера */
+    color: #fff; /* Белый текст */
+    padding: 80px 20px; /* Увеличенный отступ */
+    width: 100%;
+    margin-top: 50px; /* Дополнительное пространство сверху футера */
+}
+
+.footer-section {
+    width: 100%;
+    max-width: 300px; /* Максимальная ширина секций уменьшена */
+    margin: 10px; /* Увеличенный отступ */
+    flex: 1 1 30%; /* Секциями занимают 30% ширины и могут сжиматься */
+    padding: 20px; /* Дополнительные отступы внутри секций */
+    border-radius: 10px; /* Скругление углов секций */
+    background-color: #1a1a1a; /* Темный фон секций */
+}
+
+.footer-title {
+    font-size: 24px; /* Размер шрифта заголовков */
+    margin-bottom: 15px;
+    border-bottom: 2px solid #444; /* Линия под заголовком */
+    padding-bottom: 10px;
+}
+
+.footer-text {
+    font-size: 16px; /* Размер шрифта текста */
+    line-height: 1.6;
+}
+
+/* Стили для дополнительного контента */
+.additional-content {
+    background-color: #f4f4f4; /* Светлый фон */
+    color: #333; /* Темный текст */
+    padding: 40px 20px;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.additional-content h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.contact-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-info li {
+    margin: 5px 0;
+}
+
+.contact-info a {
+    color: #007bff; /* Цвет ссылок */
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+.newsletter form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.newsletter input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 300px;
+}
+
+.newsletter button {
+    background-color: #1a1a1a;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.newsletter button:hover {
+    background-color: #1a1a1a;
+}
+
+.social-media a {
+    color: #007bff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 18px;
+}
+
+.social-media a:hover {
+    text-decoration: underline;
+}
