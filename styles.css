@@ -76,7 +76,7 @@ body {
 /* Стили для контейнера изображения */
 .image-container {
     width: 100%; /* Позволяет изображению занимать всю доступную ширину */
-    max-width: 800px; /* Уменьшить максимальную ширину изображения */
+    max-width: 600px; /* Уменьшить максимальную ширину изображения */
     position: relative;
 }
 
@@ -133,24 +133,24 @@ body {
 /* Стили для футера */
 .footer {
     display: flex;
-    flex-wrap: wrap; /* Позволяет секциям переноситься на новую строку */
-    justify-content: space-between;
-    align-items: flex-start; /* Выравнивание секций по верхнему краю */
-    background-color: #000; /* Черный фон футера */
-    color: #fff; /* Белый текст */
-    padding: 80px 20px; /* Увеличенный отступ */
+    justify-content: space-between; /* Расположение секций по краям */
+    align-items: flex-start;
+    background-color: #000;
+    color: #fff;
+    padding: 80px 20px;
     width: 100%;
-    margin-top: 50px; /* Дополнительное пространство сверху футера */
+    margin-top: 50px;
+    box-sizing: border-box;
 }
 
+/* Стили для секций футера */
 .footer-section {
     width: 100%;
-    max-width: 300px; /* Максимальная ширина секций уменьшена */
-    margin: 10px; /* Увеличенный отступ */
-    flex: 1 1 30%; /* Секциями занимают 30% ширины и могут сжиматься */
-    padding: 20px; /* Дополнительные отступы внутри секций */
-    border-radius: 10px; /* Скругление углов секций */
-    background-color: #1a1a1a; /* Темный фон секций */
+    max-width: 300px;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #1a1a1a;
 }
 
 .footer-title {
@@ -183,58 +183,69 @@ body {
     margin-bottom: 10px;
 }
 
-.contact-info ul {
-    list-style: none;
-    padding: 0;
-}
-
-.contact-info li {
-    margin: 5px 0;
-}
-
-.contact-info a {
-    color: #007bff; /* Цвет ссылок */
-    text-decoration: none;
-}
-
-.contact-info a:hover {
-    text-decoration: underline;
-}
-
-.newsletter form {
+.about-section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: 30px;
+    background-color: #fff;
+    color: #333;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Тень для эффекта 3D */
 }
 
-.newsletter input {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    width: 300px;
+.about-item {
+    text-align: center;
 }
 
-.newsletter button {
-    background-color: #4caf50;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+.about-title {
+    font-size: 32px;
+    margin-bottom: 20px;
 }
 
-.newsletter button:hover {
-    background-color: #45a049;
+.about-text {
+    font-size: 16px;
 }
 
-.social-media a {
-    color: #007bff;
-    text-decoration: none;
-    margin: 0 10px;
-    font-size: 18px;
+/* Стили для раздела Services */
+.services {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+    width: 100%;
+    background-color: #1a1a1a;
+    color: #fff;
 }
 
-.social-media a:hover {
-    text-decoration: underline;
+.service-section {
+    flex: 1;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #2a2a2a;
+    position: relative;
+    margin: 0 10px; /* Отступы между секциями */
+}
+
+.service-section:nth-child(1) {
+    align-self: flex-start; /* Выровнять слева */
+}
+
+.service-section:nth-child(2) {
+    align-self: center; /* Выровнять по центру */
+}
+
+.service-section:nth-child(3) {
+    align-self: flex-end; /* Выровнять справа */
+}
+
+/* Стили для ссылки на Discord */
+.discord-icon a {
+    color: #fff; /* Цвет ссылки */
+    text-decoration: none; /* Убрать подчеркивание */
+}
+
+.discord-icon a:hover {
+    text-decoration: underline; /* Подчеркивание при наведении */
 }
