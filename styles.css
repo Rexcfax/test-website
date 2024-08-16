@@ -88,7 +88,7 @@ body {
 
 /* Стили для кнопки Download */
 .download-button {
-    background-color: #ff5722; /* Яркий цвет кнопки */
+    background-color: #1a1a1a; /* Яркий цвет кнопки */
     color: #fff; /* Цвет текста */
     border: none;
     padding: 20px 40px; /* Размер кнопки */
@@ -100,12 +100,12 @@ body {
 }
 
 .download-button:hover {
-    background-color: #e64a19; /* Цвет кнопки при наведении */
+    background-color: #444; /* Цвет кнопки при наведении */
     transform: scale(1.05);
 }
 
 .download-button:active {
-    background-color: #d84315; /* Цвет кнопки при нажатии */
+    background-color: #1a1a1a; /* Цвет кнопки при нажатии */
 }
 
 /* Стили для иконки Discord */
