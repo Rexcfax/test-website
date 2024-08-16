@@ -3,7 +3,8 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(135deg, #6e45e2, #88d3ce); /* Градиент фона */
+    background: #000;
+    color: #fff;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -130,122 +131,83 @@ body {
     filter: brightness(0) invert(1); /* Инверсия цветов для видимости на фоне */
 }
 
-/* Стили для футера */
-.footer {
-    display: flex;
-    justify-content: space-between; /* Расположение секций по краям */
-    align-items: flex-start;
-    background-color: #000;
-    color: #fff;
-    padding: 80px 20px;
-    width: 100%;
-    margin-top: 50px;
-    box-sizing: border-box;
-}
-
-/* Стили для секций футера */
-.footer-section {
-    width: 100%;
-    max-width: 300px;
-    margin: 10px;
-    padding: 20px;
-    border-radius: 10px;
-    background-color: #1a1a1a;
-}
-
-.footer-title {
-    font-size: 24px; /* Размер шрифта заголовков */
-    margin-bottom: 15px;
-    border-bottom: 2px solid #444; /* Линия под заголовком */
-    padding-bottom: 10px;
-}
-
-.footer-text {
-    font-size: 16px; /* Размер шрифта текста */
-    line-height: 1.6;
-}
-
-/* Стили для дополнительного контента */
-.additional-content {
-    background-color: #f4f4f4; /* Светлый фон */
-    color: #333; /* Темный текст */
-    padding: 40px 20px;
-    width: 100%;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 40px;
-}
-
-.additional-content h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-.about-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
-    background-color: #fff;
-    color: #333;
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Тень для эффекта 3D */
-}
-
-.about-item {
-    text-align: center;
-}
-
-.about-title {
-    font-size: 32px;
-    margin-bottom: 20px;
-}
-
-.about-text {
-    font-size: 16px;
-}
-
 /* Стили для раздела Services */
 .services {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 20px;
+    justify-content: space-around;
+    padding: 50px 20px; /* Увеличить внутренние отступы для раздела */
     width: 100%;
-    background-color: #1a1a1a;
-    color: #fff;
+    box-sizing: border-box;
+    background-color: #1a1a1a; /* Фон раздела Services */
 }
 
 .service-section {
     flex: 1;
-    padding: 20px;
+    max-width: 300px; /* Ограничение максимальной ширины */
+    text-align: center; /* Центрирование текста */
+    padding: 20px; /* Внутренние отступы */
     border-radius: 10px;
-    background-color: #2a2a2a;
-    position: relative;
-    margin: 0 10px; /* Отступы между секциями */
+    background: rgba(255, 255, 255, 0.1); /* Полупрозрачный фон */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Тень для эффекта 3D */
+    transition: transform 0.3s ease; /* Плавный переход для увеличения */
 }
 
-.service-section:nth-child(1) {
-    align-self: flex-start; /* Выровнять слева */
+.service-section:hover {
+    transform: translateY(-10px); /* Легкое поднятие при наведении */
 }
 
-.service-section:nth-child(2) {
-    align-self: center; /* Выровнять по центру */
+.service-title {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #ff5722; /* Цвет заголовков */
 }
 
-.service-section:nth-child(3) {
-    align-self: flex-end; /* Выровнять справа */
+.service-text {
+    font-size: 16px;
+    color: #e0e0e0; /* Цвет текста */
 }
 
-/* Стили для ссылки на Discord */
-.discord-icon a {
-    color: #fff; /* Цвет ссылки */
-    text-decoration: none; /* Убрать подчеркивание */
+/* Стили для раздела About */
+.additional-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 20px; /* Увеличить внутренние отступы для раздела */
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #000; /* Фон раздела About */
 }
 
-.discord-icon a:hover {
-    text-decoration: underline; /* Подчеркивание при наведении */
+.about-section {
+    display: flex;
+    flex-wrap: wrap; /* Разрешить перенос строк для элементов */
+    justify-content: space-around;
+    width: 100%;
+}
+
+.about-item {
+    flex: 1;
+    max-width: 300px; /* Ограничение максимальной ширины */
+    text-align: center; /* Центрирование текста */
+    padding: 20px; /* Внутренние отступы */
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1); /* Полупрозрачный фон */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Тень для эффекта 3D */
+    margin: 10px;
+    transition: transform 0.3s ease; /* Плавный переход для увеличения */
+}
+
+.about-item:hover {
+    transform: translateY(-10px); /* Легкое поднятие при наведении */
+}
+
+.about-title {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #ff5722; /* Цвет заголовков */
+}
+
+.about-text {
+    font-size: 16px;
+    color: #e0e0e0; /* Цвет текста */
 }
