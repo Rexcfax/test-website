@@ -20,3 +20,26 @@ image.addEventListener('mousemove', (e) => {
 image.addEventListener('mouseleave', () => {
     image.style.transform = 'rotateX(0deg) rotateY(0deg)'; // Сброс наклона при уходе курсора
 });
+document.addEventListener('DOMContentLoaded', () => {
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const targetId = e.currentTarget.getAttribute('data-target');
+            const targetElement = document.getElementById(targetId);
+
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth'
+                });
+
+                // Удаление активного класса у всех ссылок
+                navLinks.forEach(link => link.classList.remove('active'));
+                // Добавление активного класса текущей ссылке
+                e.currentTarget.classList.add('active');
+            }
+        });
+    });
+});
+
